@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tamil Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Tamil Music Player</h1>
+    <p>Listen by Mood, Artist, or Movie 🎶</p>
+  </header>
+
+  <main class="grid-container">
+    <a href="category.html?type=director" class="grid-card">
+      <img src="./assets/md.jpg" alt="Music Directors" />
+      <h2>🎼 Music Directors</h2>
+    </a>
+
+    <a href="category.html?type=singer" class="grid-card">
+      <img src="./assets/singer.jpg" alt="Singers" />
+      <h2>🎤 Singers</h2>
+    </a>
+
+    <a href="category.html?type=movie" class="grid-card">
+      <img src="./assets/movie.jpg" alt="Movies" />
+      <h2>🎬 Movie Albums</h2>
+    </a>
+
+    <a href="category.html?type=actor" class="grid-card">
+      <img src="./assets/a.jpg" alt="Hero Hits" />
+      <h2>⭐ Hero Hits</h2>
+    </a>
+    <a href="player.html?filter=tag&value=trending" class="grid-card">
+      <img src="./assets/trending.jpg" alt="Trending Songs" />
+      <h2>🔥 Trending Songs</h2>
+    </a>
+
+    <a href="player.html?filter=tag&value=dance" class="grid-card">
+      <img src="./assets/dance.jpg" alt="Dance Hits" />
+      <h2>💃 Dance Hits</h2>
+    </a>
+
+    <a href="player.html?filter=tag&value=new" class="grid-card">
+      <img src="./assets/new release.jpg" alt="New Releases" />
+      <h2>🆕 New Releases</h2>
+    </a>
+
+    <a href="player.html?filter=tag&value=melody" class="grid-card">
+      <img src="./assets/melody.jpg" alt="Melody Hits" />
+      <h2>🎧 Melody Hits</h2>
+    </a>
+  </main>
+
+  <section class="now-playing-section" id="now-playing-section" style="display: none;">
+  <div class="now-playing-card" id="now-playing-card">
+    <img id="np-cover" src="" alt="Cover" />
+    <div class="info">
+      <h3 id="np-title">Title</h3>
+      <p id="np-movie">Movie</p>
+      <input type="range" id="np-progress" value="0" min="0" max="100" step="1" />
+      <div>
+        <span id="np-current-time">0:00</span> / <span id="np-duration">0:00</span>
+      </div>
+      <input type="range" id="np-volume" min="0" max="1" step="0.01" value="1" />
+    </div>
+    <div class="actions">
+      <button id="np-play-pause">▶️</button>
+      <audio id="np-audio"></audio>
+    </div>
+  </div>
+</section>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | Tamil Music Vibes 🎧</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(-45deg, #1f1c2c, #928dab, #0f0c29, #302b63);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+      z-index: 2;
+      position: relative;
+      padding: 20px;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff6ec4;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff6ec4;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 40px #ff6ec4;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ddd;
+      margin-bottom: 2rem;
+      animation: slideIn 2s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .btn {
+      padding: 14px 36px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      background: #ff6ec4;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 15px #ff6ec4, 0 0 30px #ff6ec4;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+      z-index: -1;
+    }
+
+    .btn:hover::before {
+      transform: scaleX(1);
+    }
+
+    .btn:hover {
+      color: #ff6ec4;
+      box-shadow: 0 0 30px white, 0 0 60px white;
+    }
+
+    .note {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #ccc;
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .particles span {
+      position: absolute;
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      animation: moveParticles 20s linear infinite;
+      border-radius: 50%;
+    }
+
+    @keyframes moveParticles {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(0.3);
+        opacity: 0;
+      }
+    }
+    .particles span:nth-child(1) { left: 5%; animation-delay: 0s; }
+    .particles span:nth-child(2) { left: 15%; animation-delay: 2s; }
+    .particles span:nth-child(3) { left: 25%; animation-delay: 4s; }
+    .particles span:nth-child(4) { left: 40%; animation-delay: 6s; }
+    .particles span:nth-child(5) { left: 55%; animation-delay: 1s; }
+    .particles span:nth-child(6) { left: 70%; animation-delay: 3s; }
+    .particles span:nth-child(7) { left: 85%; animation-delay: 5s; }
+    .particles span:nth-child(8) { left: 95%; animation-delay: 7s; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .btn { padding: 12px 24px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="particles">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="container">
+    <h1>🎶 Tamil Music Player 🎶</h1>
+    <p>Let the rhythm speak! <br/> Dive into your favorite melodies, moods, and moments.</p>
+    <a href="index.html"><button class="btn">🎵 Start Listening</button></a>
+    <div class="note">Crafted with 💜 for true music lovers</div>
+  </div>
+</body>
+</html>
